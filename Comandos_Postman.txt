@@ -1,0 +1,12 @@
+------------POST-----------
+http://127.0.0.1:5000/Serie
+---------------------------
+Body - raw - JSON
+
+{
+  "titulo": "Friends",
+  "elenco": "Jennifer Aniston, Lisa Kudrow, David Schwimmer, Matthew Perry, Courteney Cox, Matt LeBlanc ",
+  "lancamento": 2004,
+  "genero": "Sitcom"
+}
+
