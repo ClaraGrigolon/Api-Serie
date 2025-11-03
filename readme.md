@@ -1,23 +1,23 @@
-# API de Carros - WebAPI
+# API de Series - WebAPI
 
-Está é uma API RESTful desenvolvida para o gerenciamento de informações de series, utilizando **Node.js** e **Express**. A API permite criar, ler, atualizar e excluir series, com validação dos dados utilizando a biblioteca **Joi**.
+Está é uma API RESTful desenvolvida para o gerenciamento de informações de series, utilizando **Python.py** e **Express**. A API permite criar, ler, atualizar e excluir series, com validação dos dados utilizando a biblioteca **Joi**.
 
 Este é um projeto inicial de CRUD (Create, Read, Update, Delete),que será expandido no futuro. Este é apenas o escopo inical.
 
 ## Funcionalidades
 
 - **GET /**: Retorna a lista completa de series.
-- **GET /:id**: Retorna as informações de uma serie especifica, identificado pelo id
-- **GET /:titulo**: Retorna as informações de uma serie especifica, identificado pelo titulo
+- **GET /:id**: Retorna as informações de uma serie especifica, identificada pelo id
+- **GET /:titulo**: Retorna as informações de uma serie especifica, identificada pelo titulo
 - **POST /**: Adiciona uma nova serie à lista.
-- **PUT /:id**: Atualiza as informações de uma serie especifica, identificado pelo id.
+- **PUT /:id**: Atualiza as informações de uma serie especifica, identificada pelo id.
 - **DELETE /:id**: Remove uma serie especifica pelo id.
 
 ## Estrutura do Projeto
 
-- **app.js**: Arquivo principal que configura o servidor Express e as rotas da API.
-- **tabelaseries.js**: Contém a lista de series (dados fictícios).
-- **validacao.js**: Contém as validações Joi para os dados das series.
+- **app.py**: Arquivo principal que configura o servidor Express e as rotas da API.
+- **series.db**: Contém a lista de series (dados fictícios).
+- **validacao.py**: Contém as validações Joi para os dados das series.
 
 ## Endpoints
 
@@ -47,7 +47,7 @@ Retorna a lista completa de series disponíveis.
 ```
 ### 2. **GET /:id**
 
-Retorna as informações de um serie especifica, identifado pelo id.
+Retorna as informações de um serie especifica, identificada pelo id.
 
 ### Exemplo de Requisição:
 
@@ -67,7 +67,7 @@ Retorna as informações de um serie especifica, identifado pelo id.
 
 ### 3. **GET /:titulo**
 
-Retorna as informações de um serie especifica, identifado pelo titulo.
+Retorna as informações de um serie especifica, identificada pelo titulo.
 
 ### Exemplo de Requisição:
 
@@ -168,7 +168,7 @@ Remove uma serie específica pelo id.
 1. **Clone este repositório:**
 
   ```bash
-  git clone https://github.com/seu-usuario/nome-do-repositorio.git
+  git clone https://github.com/ClaraGrigolon/Api-Serie
   ```
 
 2. **Instale as dependências:**
@@ -176,14 +176,15 @@ Remove uma serie específica pelo id.
   Navegue até o diretório do projeto e execute o comando:
 
   ```bash
-  npm install
+  pip install flask flask-sqlalchemy
   ```
 3. **Inicie o servidor**
   Após a instalação das dependências, inicie o servidor:
 
   ```bash
-  node ./app.js
+  python app.py
   ```
+
 4. **Acesse a API**
 
 A API está disponível em (http://127.0.0.1:5000/Serie)
@@ -192,11 +193,10 @@ A API está disponível em (http://127.0.0.1:5000/Serie)
 
 Os dados enviados para API são validados com **Joi** para garantir que todos os campos sejam fornecidos corretamente. As validações incluem:
 
-- O titulo, elenco e genero da serie deve ter pelo menos 1 caracter.
-- O lancamento deve ter pelo menos 4 caracteres e no maximo 8.
+- O titulo, elenco, genero e lancamento da serie devem ter pelo menos 1 caracter.
 - Durante a atualização, pelo menos um campo precisa ser fornecido.
 
-## Autor
+## Autores
 
 Desenvolvido por:
     Ana Clara Grigolon Dutra Rosa
